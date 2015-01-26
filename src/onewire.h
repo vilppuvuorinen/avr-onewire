@@ -7,6 +7,8 @@
  *
  */
 
+#include "conf.h"
+
 /**
  * @def OW_SEARCH_ROM
  *

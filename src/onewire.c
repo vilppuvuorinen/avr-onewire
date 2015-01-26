@@ -19,7 +19,6 @@
  */
 
 #include <avr/io.h>
-#include "conf.h"
 #include <util/delay.h>
 #include "onewire.h"
 
@@ -300,7 +299,7 @@ uint8_t OwSearchRom(OwContext* ctx) {
 
 	uint8_t i, j, k;
 
-	// iterate 
+	// iterate
 	for(i = 0; i < OW_MAX_ROMS; i++) {
 
 		diff_index = 0;	// reset difference pointer
@@ -333,7 +332,7 @@ uint8_t OwSearchRom(OwContext* ctx) {
 
 					// conflict
 					case 0:
-						
+
 						// Move difference pointer forward and selection the value in
 						// difference stack.
 						diff_index++;
@@ -383,7 +382,7 @@ uint8_t OwSearchRom(OwContext* ctx) {
 		if(diff & (1 << diff_index)) {			// If current index in difference stack contains a one
 												// it is set to zero along with all adjacent ones.
 			j = 0;
-			
+
 			while(diff & (1 << (diff_index - j))) {
 
 				diff &= ~(1 << (diff_index - j));

@@ -1,6 +1,6 @@
 /**
  * @def F_CPU
- * 
+ *
  * F_CPU needs to be defined to time the read delays.
  * If F_CPU is defined elsewhere, add configuration
  * header here.
