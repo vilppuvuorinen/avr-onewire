@@ -79,8 +79,6 @@ uint8_t OwReset(void);
 uint8_t OwReadByte(void);
 
 void OwWriteByte(uint8_t data);
-void OwWriteByteTo(uint8_t data, uint8_t rom);
+void OwWriteByteTo(OwContext* ctx, uint8_t rom, uint8_t data);
 
-uint8_t OwSearchRom(void);
-
-uint8_t OwRoms(uint8_t value, uint8_t rom, uint8_t index, uint8_t operation);
+uint8_t OwSearchRom(OwContext* ctx);
